@@ -1,0 +1,12 @@
+from langchain_openai import OpenAI # Importing the OpenAI lib from langchain_openai package
+from dotenv import load_dotenv  # For loading data from '.env' files --> Use load_env()
+
+load_dotenv() # Loading OpenAI API  key
+
+llm = OpenAI(model="gpt-3.5-turbo-instruct") # Creating an object or instance of OpenAI with the specified model
+
+result = llm.invoke("What is the capital of India") # '.invoke()' function is used to get responses from the LLM model
+
+""" invoke() is an very imp function for communicating with the models"""
+
+print(result)
